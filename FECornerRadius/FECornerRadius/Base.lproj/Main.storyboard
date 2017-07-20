@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BjH-tB-lKy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="k6Z-NF-5K4">
+            <objects>
+                <navigationController id="BjH-tB-lKy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fh5-FW-wuW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Gxv-6e-t7s" kind="relationship" relationship="rootViewController" id="rda-NC-T6N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pvD-ra-tWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-971" y="152"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bd2-Ns-BLy">
+            <objects>
+                <viewController id="Gxv-6e-t7s" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pJN-1a-Qo1"/>
+                        <viewControllerLayoutGuide type="bottom" id="VVr-f3-IT7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o0X-WX-Vcr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="l3s-gi-ufa">
+                                <rect key="frame" x="137.5" y="94" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gv5-Nl-4A9"/>
+                                    <constraint firstAttribute="width" constant="100" id="xUZ-JM-gWA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pF2-d0-BO6">
+                                <rect key="frame" x="137.5" y="244" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="T2M-G4-v1b"/>
+                                    <constraint firstAttribute="height" constant="100" id="xyw-Fz-QPc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKL-6G-1Eq">
+                                <rect key="frame" x="87.5" y="404" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Qm6-1d-cIh"/>
+                                    <constraint firstAttribute="width" constant="200" id="au6-PB-HjM"/>
+                                </constraints>
+                                <state key="normal" title="裁剪">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clipAction:" destination="Gxv-6e-t7s" eventType="touchUpInside" id="6dT-WR-B0q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fKL-6G-1Eq" firstAttribute="top" secondItem="pF2-d0-BO6" secondAttribute="bottom" constant="60" id="bUi-b1-hth"/>
+                            <constraint firstItem="fKL-6G-1Eq" firstAttribute="centerX" secondItem="o0X-WX-Vcr" secondAttribute="centerX" id="fRb-D4-Y17"/>
+                            <constraint firstItem="l3s-gi-ufa" firstAttribute="top" secondItem="pJN-1a-Qo1" secondAttribute="bottom" constant="30" id="m3b-Ta-x1w"/>
+                            <constraint firstItem="pF2-d0-BO6" firstAttribute="top" secondItem="l3s-gi-ufa" secondAttribute="bottom" constant="50" id="sUr-7C-aib"/>
+                            <constraint firstItem="pF2-d0-BO6" firstAttribute="centerX" secondItem="o0X-WX-Vcr" secondAttribute="centerX" id="szQ-RO-mZ5"/>
+                            <constraint firstItem="l3s-gi-ufa" firstAttribute="centerX" secondItem="o0X-WX-Vcr" secondAttribute="centerX" id="vO9-HJ-9UG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dgZ-Zq-X9g"/>
+                    <connections>
+                        <outlet property="bottomImgView" destination="pF2-d0-BO6" id="tZg-wk-uKe"/>
+                        <outlet property="topImageView" destination="l3s-gi-ufa" id="dvU-eu-Ia0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEY-c3-nlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258.39999999999998" y="151.57421289355324"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="girl.jpg" width="1600" height="1280"/>
+    </resources>
+</document>
